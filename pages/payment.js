@@ -6,7 +6,7 @@ import { Store } from '@/utils/Store';
 import { toast } from 'react-toastify';
 import Cookies from 'js-cookie';
 
-export default function paymentScreen() {
+export default function PaymentScreen() {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
@@ -69,4 +69,4 @@ export default function paymentScreen() {
     </Layout>
   );
 }
-paymentScreen.auth = true;
+PaymentScreen.auth = true;
