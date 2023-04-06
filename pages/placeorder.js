@@ -6,7 +6,7 @@ import { Store } from '../utils/Store';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
-import { getError } from '@/utils/error';
+import { getError } from '../utils/error';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
@@ -24,7 +24,6 @@ export default function PlaceOrderScreen() {
   const shippingPrice = itemsPrice > 200 ? 0 : 15;
   const taxPrice = round2(itemsPrice * 0.15);
   const totalPrice = round2(itemsPrice + shippingPrice + taxPrice);
-
   const router = useRouter();
   useEffect(() => {
     if (!paymentMethod) {
@@ -106,7 +105,7 @@ export default function PlaceOrderScreen() {
                   {cartItems.map((item) => (
                     <tr key={item._id} className="border-b">
                       <td>
-                        <Link legacyBehavior href={`/products/${item.slug}`}>
+                        <Link legacyBehavior href={`/product/${item.slug}`}>
                           <a className="flex items-center">
                             <Image
                               src={item.image}

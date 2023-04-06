@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/Link';
+import Link from 'next/link';
 import React from 'react';
 
 export default function ProductItem({ product, addToCartHandler }) {
@@ -11,6 +11,8 @@ export default function ProductItem({ product, addToCartHandler }) {
             src={product.image}
             alt={product.name}
             className="rounded shadow"
+            height={400}
+            width={650}
           />
         </a>
       </Link>

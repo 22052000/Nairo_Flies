@@ -3,16 +3,9 @@ import { useContext } from 'react';
 import Layout from '../components/Layout';
 import Product from '@/models/Product';
 import db from '@/utils/db';
-
 import axios from 'axios';
 import { Store } from '@/utils/Store';
 import { toast } from 'react-toastify';
-
-{
-  /*import { Inter } from '@next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });*/
-}
 
 export default function Home({ products }) {
   const { state, dispatch } = useContext(Store);
